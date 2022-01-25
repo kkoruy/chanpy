@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  chanbot_db:
+    container_name: 'chanbot_db'
+    image: mongo:latest
+#    command: mongod --tlsMode allowTLS --tlsCertificateKeyFile /home/mongodb/server.pem --tlsAllowInvalidCertificates --port 27017
+    ports:
+      - "49153:27017"
+    environment:
+      MONGO_INITDB_ROOT_DATABASE: root-db
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: toor
+    volumes:
+      - ./docker-entrypoint-initdb.d/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - ./home/mongodb:/home/mongodb
+      - ./keys/chanbot.key:/home/mongodb/chanbot.key:ro
+      - ./keys/tls/server.pem:/home/mongodb/server.pem:ro
+      - ./database/db:/docker-entrypoint-initdb.d
+      - /etc/localtime:/etc/localtime:ro
+      - ./data/db:/data/db
+
+
+

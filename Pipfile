@@ -1,0 +1,40 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pipenv = "*"
+flask = {extras = ["async"], version = "*"}
+pandas = "*"
+numpy = "*"
+scikit-learn = "*"
+textblob = "*"
+beautifulsoup4 = "*"
+nltk = "*"
+lxml = "*"
+requests = "*"
+html5lib = "*"
+pymongo = "*"
+aiohttp = "*"
+motor = "*"
+pyopenssl = "*"
+flask-login = "*"
+flask-admin = "*"
+flask-pymongo = "*"
+grequests = "*"
+httpx = "*"
+bcrypt = "*"
+jwt = "*"
+pyjwt = "*"
+getmac = "*"
+coverage = "*"
+spacy = "*"
+rake-spacy = "*"
+spacytextblob = "*"
+
+[dev-packages]
+pytest = "*"
+
+[requires]
+python_version = "3.9"
