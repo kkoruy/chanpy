@@ -1,5 +1,5 @@
-#### Group 4: Christian Berchtold, Dominic Meier
-# Final Project: Image Board Analyser
+#### Christian Berchtold, Dominic Meier
+# Project: Image Board Analyser
 ### Main project description
 An image board is a dataset of user generated messages, some of which contain images.
 Our project consists of a bot that automatically fetches data about threads, posts, and posters from
